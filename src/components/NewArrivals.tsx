@@ -151,7 +151,7 @@ const NewArrivals: FC = () => {
           <h1 className="font-poppins font-semibold text-black text-xl md:text-2xl text-center mb-2 pb-6">
             Shop
           </h1>
-          <div className={`grid ${latestProducts.length < 3 ? "justify-center" : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"} gap-6`}>
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6`}>
             {latestProducts?.map((product: productType) => (
               <div key={product?.id} className="mb-5 rounded-3xl overflow-hidden shadow">
                 <div className="mx-auto w-full">
