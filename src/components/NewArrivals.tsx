@@ -1,129 +1,180 @@
 import { FC, useEffect, useState } from "react";
 import K1 from "../../public/assests/Images/k1.png";
-import Arrive from "../../public/assests/Images/arrive1.png";
-import blackDImg from "../../public/assests/Images/blackD.png";
-import neklessImg from "../../public/assests/Images/nekless.png";
 import { Button } from "./ui/button";
 import useApi from "@/hooks/useApi";
 import { apiPath } from "@/lib/api-path";
 import { productType } from "@/lib/interfaces/category";
 
 const NewArrivals: FC = () => {
-const [latestProducts, setLatestProducts] = useState([])
-const { apiAction } = useApi()
+  const [latestProducts, setLatestProducts] = useState([]);
+  const { apiAction } = useApi();
 
-useEffect(() => {
-  getLatestProduct()
-}, [])
+  useEffect(() => {
+    getLatestProduct();
+  }, []);
 
-const getLatestProduct =async () => {
-  const data = await apiAction({ method: "get", url: `${apiPath?.categories?.product}?sort=3` })
-  setLatestProducts(data?.data?.product)
-}
+  const getLatestProduct = async () => {
+    const data = await apiAction({ method: "get", url: `${apiPath?.categories?.product}?sort=3` });
+    setLatestProducts(data?.data?.product);
+  };
+
+  const product = [{
+    "id": "898b9185-f325-4984-a166-51087376fd9f",
+    "title": "Customized Diamonds/Jewellerys CARAT 2",
+    "maintitle": "1 Carat Marquise Cut  dfgvfdg CARAT 2",
+    "price": "950",
+    "disccount_price": "875",
+    "shape": "Marquise MQ",
+    "carat": "1",
+    "colour": "[*] Fancy Deep Brownish Greenish Yellow",
+    "clarity": "SI1",
+    "cut": "",
+    "polish": "VG",
+    "symmetry": "GD",
+    "flourescence": "N",
+    "measurements": "",
+    "cert_number": "2367656028",
+    "table": "64",
+    "crown_height": "",
+    "pavilian_depth": "",
+    "depth": "0.96 UP",
+    "crown_angle": "",
+    "pavilian_angle": "",
+    "disccount_percentage": "7.894736842105263",
+    "productimage": [
+      "https://GemsBucket.s3.us-east-005.backblazeb2.com/product/uploads/productimage-1705300575234.png",
+      "https://GemsBucket.s3.us-east-005.backblazeb2.com/product/uploads/productimage-1705300575235.png"
+    ],
+    "status": 0,
+    "diamond_size": {
+      "size": "",
+      "size_desc": "A diamond's size is described in millimeters (mm). These measurements are roughly comparable to carats. A 1-carat round diamond is typically 6.5 mm, while a 1.25-carat round diamond is 6.8 mm. For square-cut diamonds like princess, cushion, and asscher, 1-carat is typically 5.5 mm and a 1.25 carat is 6 mm.",
+      "sizeimages": "https://GemsBucket.s3.us-east-005.backblazeb2.com/size/uploads/sizeimages-1705300575220.png"
+    },
+    "diamond_color": {
+      "color_desc": "Diamond color is all about what you can’t see. Diamonds are valued by how closely they approach colorlessness – the less color, the higher their value. (The exception to this is fancy color diamonds, such as pinks and blues, which lie outside this color range.) Most diamonds found in jewelry stores run from colorless to near-colorless, with slight hints of yellow or brown.",
+      "colorimage": "https://GemsBucket.s3.us-east-005.backblazeb2.com/color/uploads/colorimage-1705300575227.png"
+    },
+    "diamond_clarity": {
+      "clarity_desc": "The GIA Clarity Scale contains 11 grades, with most diamonds falling into the VS (very slightly included) or SI (slightly included) categories. In determining a clarity grade, the GIA system considers the size, nature, position, color or relief, and quantity of clarity characteristics visible under 10× magnification.",
+      "clarityimage": "https://GemsBucket.s3.us-east-005.backblazeb2.com/clarity/uploads/clarityimage-1705300575230.png"
+    },
+    "diamond_cut": {
+      "cut_desc": "The GIA Cut Grading System applies to the most popular cutting style – the standard round brilliant – and all clarities across the D-to-Z color range. There are five cut grades: Excellent (EX), Very Good (VG), Good (G), Fair (F) and Poor (P). A diamond with an Excellent cut grade is very bright.14-Jan-2016",
+      "cutimage": "https://GemsBucket.s3.us-east-005.backblazeb2.com/cut/uploads/cutimage-1705300575232.png"
+    },
+    "createdAt": "2024-01-15T01:06:34.134Z",
+    "updatedAt": "2024-01-15T01:06:34.134Z",
+    "subcategoryid": null,
+    "categoryid": {
+      "id": "ef7088d3-b930-45c5-872d-8d69924ab0aa",
+      "name": "Diamond",
+      "description": "Diamond",
+      "image": null,
+      "status": 0,
+      "createdAt": "2024-01-14T23:27:35.002Z",
+      "updatedAt": "2024-01-14T23:27:35.002Z"
+    },
+    "innercategoryid": null
+  }, {
+    "id": "898b9185-f325-4984-a166-51087376fd9f",
+    "title": "Customized Diamonds/Jewellerys CARAT 2",
+    "maintitle": "1 Carat Marquise Cut  dfgvfdg CARAT 2",
+    "price": "950",
+    "disccount_price": "875",
+    "shape": "Marquise MQ",
+    "carat": "1",
+    "colour": "[*] Fancy Deep Brownish Greenish Yellow",
+    "clarity": "SI1",
+    "cut": "",
+    "polish": "VG",
+    "symmetry": "GD",
+    "flourescence": "N",
+    "measurements": "",
+    "cert_number": "2367656028",
+    "table": "64",
+    "crown_height": "",
+    "pavilian_depth": "",
+    "depth": "0.96 UP",
+    "crown_angle": "",
+    "pavilian_angle": "",
+    "disccount_percentage": "7.894736842105263",
+    "productimage": [
+      "https://GemsBucket.s3.us-east-005.backblazeb2.com/product/uploads/productimage-1705300575234.png",
+      "https://GemsBucket.s3.us-east-005.backblazeb2.com/product/uploads/productimage-1705300575235.png"
+    ],
+    "status": 0,
+    "diamond_size": {
+      "size": "",
+      "size_desc": "A diamond's size is described in millimeters (mm). These measurements are roughly comparable to carats. A 1-carat round diamond is typically 6.5 mm, while a 1.25-carat round diamond is 6.8 mm. For square-cut diamonds like princess, cushion, and asscher, 1-carat is typically 5.5 mm and a 1.25 carat is 6 mm.",
+      "sizeimages": "https://GemsBucket.s3.us-east-005.backblazeb2.com/size/uploads/sizeimages-1705300575220.png"
+    },
+    "diamond_color": {
+      "color_desc": "Diamond color is all about what you can’t see. Diamonds are valued by how closely they approach colorlessness – the less color, the higher their value. (The exception to this is fancy color diamonds, such as pinks and blues, which lie outside this color range.) Most diamonds found in jewelry stores run from colorless to near-colorless, with slight hints of yellow or brown.",
+      "colorimage": "https://GemsBucket.s3.us-east-005.backblazeb2.com/color/uploads/colorimage-1705300575227.png"
+    },
+    "diamond_clarity": {
+      "clarity_desc": "The GIA Clarity Scale contains 11 grades, with most diamonds falling into the VS (very slightly included) or SI (slightly included) categories. In determining a clarity grade, the GIA system considers the size, nature, position, color or relief, and quantity of clarity characteristics visible under 10× magnification.",
+      "clarityimage": "https://GemsBucket.s3.us-east-005.backblazeb2.com/clarity/uploads/clarityimage-1705300575230.png"
+    },
+    "diamond_cut": {
+      "cut_desc": "The GIA Cut Grading System applies to the most popular cutting style – the standard round brilliant – and all clarities across the D-to-Z color range. There are five cut grades: Excellent (EX), Very Good (VG), Good (G), Fair (F) and Poor (P). A diamond with an Excellent cut grade is very bright.14-Jan-2016",
+      "cutimage": "https://GemsBucket.s3.us-east-005.backblazeb2.com/cut/uploads/cutimage-1705300575232.png"
+    },
+    "createdAt": "2024-01-15T01:06:34.134Z",
+    "updatedAt": "2024-01-15T01:06:34.134Z",
+    "subcategoryid": null,
+    "categoryid": {
+      "id": "ef7088d3-b930-45c5-872d-8d69924ab0aa",
+      "name": "Diamond",
+      "description": "Diamond",
+      "image": null,
+      "status": 0,
+      "createdAt": "2024-01-14T23:27:35.002Z",
+      "updatedAt": "2024-01-14T23:27:35.002Z"
+    },
+    "innercategoryid": null
+  },]
 
   return (
     <section className="w-full">
-      <div className="flex flex-col items-center py-[75px] px-[20px] container">
-        <div className="px-0 pb-[30px] flex w-full flex-row items-stretch justify-center flex-wrap">
-          <div className="w-full flex items-center text-center py-0 px-5 flex-nowrap flex-col">
-            <h1 className="font-poppins  w-full text-center text-[#211c50] text-[35px] font-bold">
-              <div>New Arrivals</div>
+      <div className="flex flex-col items-center py-10 md:py-16 px-5 container mx-auto">
+        <div className="pb-8 flex w-full flex-row items-center justify-center flex-wrap">
+          <div className="w-full text-center flex flex-col items-center">
+            <h1 className="font-poppins text-[#211c50] text-3xl md:text-4xl font-bold mb-4">
+              New Arrivals
             </h1>
-            <img src={K1} alt="k1" className="w-[120px]" />
+            <img src={K1} alt="k1" className="w-24 md:w-32" />
           </div>
         </div>
-        <div className="mb-[45px]">
-          <h1 className="font-poppins font-semibold text-[#000] text-2xl text-center mb-2">
+        <div className="mb-10">
+          <h1 className="font-poppins font-semibold text-black text-xl md:text-2xl text-center mb-2 pb-6">
             Shop
           </h1>
-          <div className="">
-            <ul className="p-0 list-none clear-both after:table flex items-center flex-wrap justify-center gap-10 cursor-pointer">
-              {latestProducts?.map((product:productType)=>{
-                return (
-                  <li className="max-w-full lg:w-[25%] md:w-[25%] float-left relative ml-0 bg-[#f1f1f1]  rounded-[20px]">
-                    <div className="flex text-center items-center flex-col relative rounded-t-lg overflow-hidden p-0 h-full decoration-none text-[#211c50] font-semibold">
-                      <img
-                        src={product?.productimage?.[0]||''}
-                        alt="Arrive"
-                        className="w-full block shadow-none h-[250px]"
-                      />
-                    </div>
-                    <div className="my-3 ml-3">
-                      <div className="max-w-full overflow-hidden text-ellipsis whitespace-nowrap">{product?.title}</div>
-                      <div className="text-[#211c50] font-medium">
-                        <del>$440</del> ${product?.price}
-                      </div>
-                    </div>
-                  </li>
-                )
-              })}
-              {/* <li className="max-w-full lg:w-[25%] md:w-[25%] float-left relative ml-0 bg-[#f1f1f1] rounded-[20px]">
-                <div className="flex text-center items-center flex-col relative rounded-t-lg overflow-hidden p-0 h-full decoration-none text-[#211c50] font-semibold">
+          <div className={`grid ${latestProducts.length < 3 ? "justify-center" : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"} gap-6`}>
+            {latestProducts?.map((product: productType) => (
+              <div key={product?.id} className="mb-5 rounded-3xl overflow-hidden shadow">
+                <div className="mx-auto w-full">
                   <img
-                    src={Arrive}
+                    src={product?.productimage?.[0] || ''}
                     alt="Arrive"
-                    className="w-full block shadow-none h-[250px]"
+                    className="max-w-full block shadow-none h-[250px] object-cover w-fit mx-auto"
                   />
                 </div>
-                <div className="my-3 ml-3">
-                  <div>Product Name</div>
+                <div className="p-4 text-center text-base">
+                  <div className="">{product?.title}</div>
                   <div className="text-[#211c50] font-medium">
-                    <del>$440</del> $420.31
+                    ${product?.price}
                   </div>
                 </div>
-              </li>
-              <li className="max-w-full lg:w-[25%] md:w-[25%] float-left relative ml-0 bg-[#f1f1f1] rounded-[20px]">
-                <div className="flex text-center items-center flex-col relative rounded-t-lg overflow-hidden p-0 h-full decoration-none text-[#211c50] font-semibold">
-                  <img
-                    src={blackDImg}
-                    alt="blackDImg"
-                    className="w-full block shadow-none h-[250px]"
-                  />
-                </div>
-                <div className="my-3 ml-3">
-                  <div>Product Name</div>
-                  <div className="text-[#211c50] font-medium">
-                    <del>$440</del> $420.31
-                  </div>
-                </div>
-              </li>
-              <li className="max-w-full lg:w-[25%] md:w-[25%] float-left relative ml-0 bg-[#f1f1f1] rounded-[20px]">
-                <div className="flex text-center items-center flex-col relative rounded-t-lg overflow-hidden p-0 h-full decoration-none text-[#211c50] font-semibold">
-                  <img
-                    src={neklessImg}
-                    alt="neklessImg"
-                    className="w-full block shadow-none h-[250px]"
-                  />
-                </div>
-                <div className="my-3 ml-3">
-                  <div>Product Name</div>
-                  <div className="text-[#211c50] font-medium">
-                    <del>$440</del> $420.31
-                  </div>
-                </div>
-              </li>
-              <li className="max-w-full lg:w-[25%] md:w-[25%] float-left relative ml-0 bg-[#f1f1f1] rounded-[20px]">
-                <div className="flex text-center items-center flex-col relative rounded-t-lg overflow-hidden p-0 h-full decoration-none text-[#211c50] font-semibold">
-                  <img
-                    src={Arrive}
-                    alt="Arrive"
-                    className="w-full block shadow-none h-[250px]"
-                  />
-                </div>
-                <div className="my-3 ml-3">
-                  <div>Product Name</div>
-                  <div className="text-[#211c50] font-medium">
-                    <del>$440</del> $420.31
-                  </div>
-                </div>
-              </li> */}
-            </ul>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="flex items-center justify-center text-[17px] font-medium font-poppins">
+        <div className="flex items-center justify-center text-sm md:text-base font-medium font-poppins">
           <Button
-            variant={"outline"}
-            className="border border-[#211c50] py-[8px] px-[25px] hover:text-[#fff] hover:bg-[#211c50]"
+            variant="outline"
+            className="border border-[#211c50] py-2 px-6 hover:text-white hover:bg-[#211c50]"
           >
             View All Products
           </Button>
